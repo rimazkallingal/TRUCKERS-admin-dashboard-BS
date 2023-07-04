@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Truckers</title>
+    <link rel="icon" href="images/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/95092d94ea.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- header-section -->
+    <header class="container-fluid p-0 bg-white">
+      <nav class="header navbar navbar-dark sticky-top bg-white flex-md-nowrap">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"
+          ><img src="images/logo.svg"
+        /></a>
+        <ul
+          class="navbar-nav navbar-expand-lg px-3 align-items-center text-white flex-row"
+        >
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#"
+              ><img src="images/icon-search.png"
+            /></a>
+          </li>
+          <li class="nav-item text-nowrap">
+            <a class="nav-link" href="#">
+              <img
+                src="images/notification-icon.svg"
+                class="position-relative"
+              />
+              <!-- <span class="text-white notification position-absolute mb-0"
+                >01</span
+              > -->
+            </a>
+          </li>
+          <li class="nav-item text-nowrap">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="admin-image">
+                <img src="images/admin.png" />
+              </div>
+              <div class="admin-content text-capitalize pl-3">
+                <h6 class="admin-name">Jevike Automobile LLC</h6>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- header-section-end -->
+    <!-- main-content-section -->
+    <section class="container-fluid p-0">
+      <div class="row">
+        <!-- sidebar-section -->
+        <nav
+          class="col-lg-2 col-md-2 d-none d-md-block bg-gradient-1 sidebar p-0"
+        >
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <img src="images/icon-home.png" />
+                  <p class="mb-0">Home</p></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <img src="images/icon-search-vehicles.png" />
+                  <p class="mb-0">Search Vehicles</p></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <img src="images/icon-saved-search.png" />
+                  <p class="mb-0">Saved Searches</p></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center active" href="#">
+                  <img src="images/icon-my-orders.png" />
+                  <p class="mb-0">My Orders</p></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center" href="#">
+                  <img src="images/icon-transport-services.png" />
+                  <p class="mb-0">Transporter Services</p></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- sidebar-section-end -->
+        <!-- form-section -->
+        <div class="form-section col-lg-10 col-md-10 p-0">
+          <div class="main-box row flex-column justify-content-center">
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-6">
+                <div class="box-container">
+                  <p class="box-heading">Featured Image</p>
+                  <div class="box-column">
+                    <label class="label-font">Upload image</label>
+                    <div class="row justify-content-center">
+                      <input
+                        class="input-font col-lg-6 col-md-6"
+                        type="text"
+                        placeholder="City"
+                      />
+                      <div class="col-lg-6 col-md-6">
+                        <button class="btn-navy">Upload</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-main col-lg-6">
+                <div class="box-container">
+                  <p class="box-heading">Remarks</p>
+                  <div class="box-column">
+                    <label class="label-font">Remarks/Notes</label>
+
+                    <input
+                      class="input-font col-lg-12"
+                      type="text"
+                      placeholder="Eg: Call “John Doe” at 12345678"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <p class="box-heading">Origin</p>
+                  <div class="box-column row align-items-center padding">
+                    <div
+                      class="row justify-content-lg-start justify-content-center col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">City</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="City"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">State</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="State"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Postal Code</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Postal Code"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Country</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Country"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-start col-lg-12">
+                      <p class="box-heading col-lg-12 mb-0 p-0">Destination</p>
+                    </div>
+                    <div
+                      class="row justify-content-lg-start justify-content-start col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">City</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="City"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">State</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="State"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Postal Code</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Postal Code"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <p class="box-heading">Vehicle Information</p>
+                  <div class="box-column row align-items-center padding">
+                    <div
+                      class="row justify-content-lg-between justify-content-between align-items-end col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Trailer Type</label>
+                        <div
+                          class="row justify-content-lg-between justify-content-center"
+                        >
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="enclosed"
+                          />
+                        </div>
+                      </div>
+                      <div class="pr-3 pl-3">
+                        <button class="btn-navy">Upload</button>
+                      </div>
+                    </div>
+                    <div
+                      class="row justify-content-lg-between justify-content-start col-lg-11 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Year</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="2019"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Make</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Brand"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Model</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="vehicle model"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Vehicle Type</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Vehicle Type"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-start col-lg-1 p-0">
+                      <div class="input-card col-lg-12 col-md-6">
+                        <label class="label-font">Qty</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="01"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="row justify-content-lg-start justify-content-center col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-12">
+                        <label class="label-font">Additional Information</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12 additional"
+                            type="text"
+                            placeholder="Enter the details here"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <p class="box-heading">Pickup and Delivery Dates</p>
+                  <div class="box-column row align-items-center padding">
+                    <div class="input-card col-lg-3 col-md-6">
+                      <label class="label-font">Date Available to Ship</label>
+                      <div class="row justify-content-between">
+                        <input
+                          class="input-font col-lg-12"
+                          type="text"
+                          placeholder="02/05/2022"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <p class="box-heading">Pricing and Payment</p>
+                  <div class="box-column row align-items-center padding">
+                    <div
+                      class="row justify-content-lg-start justify-content-start col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Price to Pay Carrier </label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="$0"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">COD/COP Amount</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="$0"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Balance Amount</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="$0"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <p class="box-heading">Additional Information</p>
+                  <div class="box-column row align-items-center padding">
+                    <div
+                      class="row justify-content-lg-start justify-content-start col-lg-12 p-0"
+                    >
+                      <div class="input-card col-lg-3 col-md-6">
+                        <label class="label-font">Order ID</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="#234567"
+                          />
+                        </div>
+                      </div>
+                      <div class="input-card col-lg-9 col-md-12">
+                        <label class="label-font">Additional Terms</label>
+                        <div class="row justify-content-between">
+                          <input
+                            class="input-font col-lg-12"
+                            type="text"
+                            placeholder="Details here"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-row row justify-content-center">
+              <div class="box-main col-lg-12">
+                <div class="box-container">
+                  <div class="box-col d-flex">
+                    <input class="checkbox checkbox-style">
+                    <div class="accept row pl-4 row-gap-20">
+                    <p class="paragraph mb-0 col-lg-12 p-0">
+                      * I acknowledge and agree that once the carrier has
+                      accepted my request, I will be entered into a legal
+                      contract with the carrier for the transport of my
+                      vehicle(s). I further acknowledge and agree that
+                      Dealertrack Central Dispatch, Inc. is not a party to such
+                      contract, and has no obligation or liability whatsoever
+                      arising out of such contract. I consent to Dealertrack
+                      Central Dispatch, Inc. adding a provision to this effect
+                      in my dispatch sheets. I also understand that any changes
+                      that I make to the dispatch sheet after the carrier has
+                      accepted my request, unless the carrier has approved the
+                      change, may not be binding on the carrier.
+                    </p>
+                    <button class="btn-red">Posts Listing</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- form-section-end -->
+      </div>
+    </section>
+    <!-- main-content-section-end -->
+    <!-- footer-section -->
+    <footer class="bg-white">
+      <div class="row justify-content-between align-items-center">
+      <div >© 2022 Truckers. All rights reserved</div>
+      <div >
+        <img class="p-1" src="images/icon-facebook.svg">
+        <img class="p-1" src="images/icon-linkedin.svg">
+        <img class="p-1" src="images/icon-twitter.svg">
+      </div>
+    </div>
+    </footer>
+    <!-- footer-section-end -->
+  </body>
+</html>
